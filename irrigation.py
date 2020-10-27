@@ -3,12 +3,12 @@ import datetime as DT
 def irrigation():
     # Override you radiation value here
     radiation = 100
-    if exceed(radiation):
+    if is_exceeded(radiation):
         return print("Irrigation Started.")
 
     return print("Not started")
 
-def exceed(radiation_value):
+def is_exceeded(radiation_value):
   if radiation_value > 92.3 : 
     if check_time():
       return True
